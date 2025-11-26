@@ -62,7 +62,6 @@ Choose an operation:
   });
 }
 
-// CREATE
 function createRecord() {
   rl.question('Enter name: ', name => {
     rl.question('Enter age: ', age => {
@@ -79,7 +78,7 @@ function createRecord() {
   });
 }
 
-// READ
+
 function readRecords() {
   const sql = 'SELECT * FROM students';
   db.query(sql, (err, results) => {
@@ -92,7 +91,7 @@ function readRecords() {
   });
 }
 
-// UPDATE
+
 function updateRecord() {
   rl.question('Enter ID to update: ', id => {
     rl.question('Enter new name: ', name => {
@@ -111,7 +110,7 @@ function updateRecord() {
   });
 }
 
-// DELETE
+
 function deleteRecord() {
   rl.question('Enter ID to delete: ', id => {
     const sql = 'DELETE FROM students WHERE id = ?';
